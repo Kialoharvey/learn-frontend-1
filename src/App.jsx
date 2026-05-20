@@ -15,15 +15,15 @@ function App() {
 
   return (
     <main className="app">
-      <h1>PNG Culture React Practice</h1>
+      <h1>Week 1 React Practice on my website</h1>
 
       <p>
-        This project practices React components, props, state, and JSX.
+        This Week 1 project practices React components, props, state, and JSX fundamentals.
       </p>
 
       <CultureCard
-        title="Papua New Guinea Culture"
-        description="PNG is known for its many languages, traditions, dances, and community values."
+        title="Papua New Guinea Culture & Tradition"
+        description="PNG is known for its language diversity, traditions and mountainous geography."
       />
 
       <CultureCard
