@@ -15,7 +15,7 @@ function App() {
 
   return (
     <main className="app">
-      <h1>Week 1 React Practice on my website</h1>
+      <h1>Learn Front End 3 React Practice</h1>
 
       <p>
         This Week 1 project practices React components, props, state, and JSX fundamentals.
