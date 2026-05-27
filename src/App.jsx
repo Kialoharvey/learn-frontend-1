@@ -20,6 +20,9 @@ function App() {
       <p>
         This Week 1 project practices React components, props, state, and JSX fundamentals.
       </p>
+      <button onClick={() => setLikes(likes + 1)}>
+       Likes: {likes}
+       </button>
 
       <CultureCard
         title="Papua New Guinea Culture & Tradition"
