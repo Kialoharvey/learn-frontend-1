@@ -18,7 +18,7 @@ function App() {
       <h1>Learn Front End 3 React Practice</h1>
 
       <p>
-        This Week 1 project practices React components, props, state, and JSX fundamentals.
+        This is Week 2 leaning plan continued on React components, props, state, and JSX fundamentals.
       </p>
       <button onClick={() => setLikes(likes + 1)}>
        Likes: {likes}
