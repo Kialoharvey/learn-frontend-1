@@ -30,6 +30,15 @@ function App() {
         title="React Component Practice"
         description="This card is a reusable React component using props."
       />
+      <CultureCard
+  title="Traditional PNG Dances"
+  description="Traditional dances are used during celebrations, ceremonies and cultural festivals."
+/>
+
+<CultureCard
+  title="PNG Food and Cooking"
+  description="Many PNG communities cook food using earth ovens and natural ingredients."
+/>
 
       <section className="card">
         <h2>State Practice</h2>
