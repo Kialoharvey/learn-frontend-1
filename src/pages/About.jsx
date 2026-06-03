@@ -4,8 +4,7 @@ function About() {
       <h2>About This Project</h2>
 
       <p>
-        This project was created for CS 490 to practice frontend development
-        using React.
+        This project is created to practice frontend development using React.
       </p>
 
       <p>
