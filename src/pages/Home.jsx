@@ -15,7 +15,6 @@ function Home() {
         <li>Learn about PNG culture</li>
         <li>Explore traditions and customs</li>
         <li>Discover different provinces</li>
-        <li>Practice React development skills</li>
       </ul>
     </section>
   );
