@@ -1,7 +1,7 @@
 function Home() {
   return (
     <section className="page">
-      <h2>Welcome to PNG Culture Explorer</h2>
+      <h2>Welcome to PNG Culture and Tradition Explorer</h2>
 
       <p>
         Papua New Guinea is home to more than 800 languages and many unique
