@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import backgroundImage from "./assets/img01.png";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -17,8 +18,12 @@ import CreateComment from "./pages/CreateComment";
 function App() {
   return (
     <BrowserRouter>
-      <main className="app">
-        <h1>PNG Culture Frontend</h1>
+      <main
+  className="app"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.82)), url(${backgroundImage})`
+  }}
+>
 
         <nav>
           <Link to="/">Home</Link>

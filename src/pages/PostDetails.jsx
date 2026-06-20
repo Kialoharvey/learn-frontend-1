@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function PostDetails() {
   const { id } = useParams();
@@ -17,11 +17,14 @@ function PostDetails() {
       }
 
       try {
-        const response = await fetch(`http://localhost:3000/culture-posts/${id}`, {
-          headers: {
-            Authorization: `Bearer ${token}`
+        const response = await fetch(
+          `http://localhost:3000/culture-posts/${id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
           }
-        });
+        );
 
         const data = await response.json();
 
@@ -45,16 +48,26 @@ function PostDetails() {
       <p>{message}</p>
 
       {post && (
-        <div className="card">
+        <div className="details-box">
           <h2>{post.title}</h2>
+
           <p>{post.description}</p>
-          <p><strong>Province:</strong> {post.province}</p>
+
+          <p>
+            <strong>Province:</strong> {post.province}
+          </p>
 
           {post.imageUrl && (
             <p>
               <strong>Image URL:</strong> {post.imageUrl}
             </p>
           )}
+
+          <br />
+
+          <Link to={`/posts/${id}/edit`}>
+            <button>Edit Post</button>
+          </Link>
         </div>
       )}
     </div>
