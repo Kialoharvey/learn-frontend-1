@@ -43,7 +43,7 @@ function Signup() {
 
   return (
     <div>
-      <h1>Sign Up</h1>
+      <h1 className="signup-title">Sign Up</h1>
 
       <form onSubmit={handleSubmit}>
         <input name="name" placeholder="Name" onChange={handleChange} />

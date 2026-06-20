@@ -26,7 +26,7 @@ function Comments() {
 
   return (
     <div>
-      <h1>Comments</h1>
+      <h1 className="comments-title">Comments</h1>
       <p>{message}</p>
 
       {comments.map((comment) => (

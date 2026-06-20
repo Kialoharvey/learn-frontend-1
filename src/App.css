@@ -21,7 +21,7 @@ body{
 h1{
   margin:0;
   padding-top:40px;
-  font-size:4rem;
+  font-size:2rem;
   font-weight:900;
   color:white;
   text-shadow:3px 3px 10px black;
@@ -51,7 +51,7 @@ nav a:hover{
 }
 
 h2{
-  font-size:3.5rem;
+  font-size:1rem;
   margin-bottom:30px;
   color:rgb(215, 244, 210);
   font-weight:bold;
@@ -168,14 +168,10 @@ a:hover{
 /* Force page titles to show clearly */
 .app h1,
 .app h2 {
-  color: white !important;
-  text-shadow: 4px 4px 12px black !important;
+  color: #90EE90 !important; /* light green */
+  text-shadow: 3px 3px 7px black !important;
   opacity: 1 !important;
   position: relative;
-  z-index: 5;
+  z-index: 3;
 }
 
-.app h2 {
-  font-size: 4rem !important;
-  font-weight: 900 !important;
-}

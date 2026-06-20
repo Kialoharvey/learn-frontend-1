@@ -38,7 +38,7 @@ function Posts() {
 
   return (
     <div>
-      <h1>Culture Posts</h1>
+      <h1 className="culture-title">Culture Posts</h1>
 
       <p>{message}</p>
 
