@@ -50,7 +50,7 @@ function CreateComment() {
 
   return (
     <div>
-      <h1>Create Comment</h1>
+      <h1 className="create-comment-title">Create Comment</h1>
 
       <form onSubmit={handleSubmit}>
         <label>Culture Post ID:</label>
