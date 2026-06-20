@@ -53,12 +53,12 @@ nav a:hover{
 h2{
   font-size:3.5rem;
   margin-bottom:30px;
-  color:white;
+  color:rgb(215, 244, 210);
   font-weight:bold;
   text-shadow:
-    0 0 10px rgba(0,0,0,0.9),
-    0 0 20px rgba(0,0,0,0.9),
-    3px 3px 10px black;
+    0 0 10px rgba(231, 198, 198, 0.9),
+    0 0 20px rgba(238, 221, 221, 0.9),
+    3px 3px 10px rgb(230, 217, 217);
 }
 
 h3{
@@ -164,4 +164,18 @@ a:hover{
   padding:40px;
   border-radius:20px;
   box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+/* Force page titles to show clearly */
+.app h1,
+.app h2 {
+  color: white !important;
+  text-shadow: 4px 4px 12px black !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 5;
+}
+
+.app h2 {
+  font-size: 4rem !important;
+  font-weight: 900 !important;
 }
