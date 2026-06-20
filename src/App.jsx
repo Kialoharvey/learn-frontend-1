@@ -14,7 +14,7 @@ import EditPost from "./pages/EditPost";
 import Comments from "./pages/Comments";
 import CommentDetails from "./pages/CommentDetails";
 import CreateComment from "./pages/CreateComment";
-import EditComment from "./pages/EditComment";
+
 
 function App() {
   return (
@@ -52,7 +52,7 @@ function App() {
           <Route path="/comments" element={<Comments />} />
           <Route path="/comments/create" element={<CreateComment />} />
           <Route path="/comments/:id" element={<CommentDetails />} />
-          <Route path="/comments/:id/edit" element={<EditComment />} />
+          
         </Routes>
       </main>
     </BrowserRouter>
