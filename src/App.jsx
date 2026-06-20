@@ -14,17 +14,17 @@ import EditPost from "./pages/EditPost";
 import Comments from "./pages/Comments";
 import CommentDetails from "./pages/CommentDetails";
 import CreateComment from "./pages/CreateComment";
+import EditComment from "./pages/EditComment";
 
 function App() {
   return (
     <BrowserRouter>
       <main
-  className="app"
-  style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.82)), url(${backgroundImage})`
-  }}
->
-
+        className="app"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.82)), url(${backgroundImage})`
+        }}
+      >
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
@@ -52,6 +52,7 @@ function App() {
           <Route path="/comments" element={<Comments />} />
           <Route path="/comments/create" element={<CreateComment />} />
           <Route path="/comments/:id" element={<CommentDetails />} />
+          <Route path="/comments/:id/edit" element={<EditComment />} />
         </Routes>
       </main>
     </BrowserRouter>
