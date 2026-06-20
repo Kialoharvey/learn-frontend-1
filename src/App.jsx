@@ -8,6 +8,11 @@ import Signup from "./pages/signup";
 import Login from "./pages/login";
 import Posts from "./pages/Posts";
 import PostDetails from "./pages/PostDetails";
+import CreatePost from "./pages/CreatePost";
+import EditPost from "./pages/EditPost";
+import Comments from "./pages/Comments";
+import CommentDetails from "./pages/CommentDetails";
+import CreateComment from "./pages/CreateComment";
 
 function App() {
   return (
@@ -22,17 +27,26 @@ function App() {
           <Link to="/signup">Sign Up</Link>
           <Link to="/login">Login</Link>
           <Link to="/posts">Culture Posts</Link>
+          <Link to="/posts/create">Create Post</Link>
+          <Link to="/comments">Comments</Link>
+          <Link to="/comments/create">Create Comment</Link>
         </nav>
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+
           <Route path="/posts" element={<Posts />} />
+          <Route path="/posts/create" element={<CreatePost />} />
           <Route path="/posts/:id" element={<PostDetails />} />
+          <Route path="/posts/:id/edit" element={<EditPost />} />
+
+          <Route path="/comments" element={<Comments />} />
+          <Route path="/comments/create" element={<CreateComment />} />
+          <Route path="/comments/:id" element={<CommentDetails />} />
         </Routes>
       </main>
     </BrowserRouter>
