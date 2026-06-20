@@ -22,25 +22,32 @@ function Login() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(form)
-      });
+      const response = await fetch(
+        "http://localhost:3000/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(form)
+        }
+      );
 
       const data = await response.json();
 
       if (data.token) {
         localStorage.setItem("token", data.token);
+
         setMessage("Login successful.");
-        navigate("/posts");
+
+        setTimeout(() => {
+          navigate("/posts");
+        }, 1500);
       } else {
         setMessage(data.message || "Login failed.");
       }
     } catch (error) {
-      setMessage("Something went wrong. Please try again.");
+      setMessage("Something went wrong.");
     }
   }
 
@@ -50,6 +57,7 @@ function Login() {
 
       <form onSubmit={handleSubmit}>
         <input
+          type="email"
           name="email"
           placeholder="Email"
           value={form.email}
