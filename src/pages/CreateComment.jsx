@@ -1,9 +1,8 @@
 function CreateComment() {
   return (
-    <>
+    <div>
       <h2>Create Comment</h2>
-      <p>Create a new comment.</p>
-    </>
+    </div>
   );
 }
 

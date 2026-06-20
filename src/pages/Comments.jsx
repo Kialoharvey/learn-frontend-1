@@ -1,9 +1,8 @@
 function Comments() {
   return (
-    <>
+    <div>
       <h2>Comments</h2>
-      <p>View all comments.</p>
-    </>
+    </div>
   );
 }
 
