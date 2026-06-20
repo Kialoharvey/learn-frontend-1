@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 function PostDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [post, setPost] = useState(null);
   const [message, setMessage] = useState("");
@@ -41,6 +42,41 @@ function PostDetails() {
     getPost();
   }, [id]);
 
+  async function handleDelete() {
+    const token = localStorage.getItem("token");
+
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this post?"
+    );
+
+    if (!confirmDelete) {
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `http://localhost:3000/culture-posts/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Post deleted successfully.");
+        navigate("/posts");
+      } else {
+        setMessage(data.message || "Could not delete post.");
+      }
+    } catch (error) {
+      setMessage("Could not connect to API.");
+    }
+  }
+
   return (
     <div>
       <h1>Culture Post Details</h1>
@@ -68,6 +104,13 @@ function PostDetails() {
           <Link to={`/posts/${id}/edit`}>
             <button>Edit Post</button>
           </Link>
+
+          <br />
+          <br />
+
+          <button onClick={handleDelete}>
+            Delete Post
+          </button>
         </div>
       )}
     </div>
